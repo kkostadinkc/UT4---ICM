@@ -1,0 +1,80 @@
+.contenedorGridAlingContent, .contenedorGridJustifyContentSpace-between, .contenedorGridJustifyContentSpace-evenly, .contenedorGridJustifyContentSpace-around, .contenedorGridJustifyContentCenter, .contenedorGridJustifyContentEnd, .contenedorGridTempRows, .contenedorGridTempColumns, .contenedorGrid, .contenedorGridLinea, .contenedorGridBloque {
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+  grid-gap: 30px;
+  grid-row: 40px;
+}
+
+.contenedorGridAlingContent__elementoHijo, .contenedorGridJustifyContentSpace-between__elementoHijo, .contenedorGridJustifyContentSpace-evenly__elementoHijo, .contenedorGridJustifyContentSpace-around__elementoHijo, .contenedorGridJustifyContentCenter__elementoHijo, .contenedorGridJustifyContentEnd__elementoHijo, .contenedorGridTempRows__elementoHijo, .contenedorGridTempColumns__elementoHijo, .contenedorGrid__elementoHijo7, .contenedorGrid__elementoHijo2, .contenedorGrid__elementoHijo, .contenedorGridLinea__elementoHijo, .contenedorGridBloque__elementoHijo {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.contenedorGridBloque {
+  display: grid;
+}
+.contenedorGridLinea {
+  display: inline-grid;
+}
+.contenedorGrid {
+  display: grid;
+}
+.contenedorGrid__elementoHijo2 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.contenedorGrid__elementoHijo7 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.contenedorGridTempColumns {
+  display: grid;
+  /* grid-template-columns: 20% 20% 20% 20% 20%; */
+  grid-template-columns: repeat(5, 20%);
+  box-sizing: border-box;
+  gap: 0;
+}
+.contenedorGridTempRows {
+  display: grid;
+  /* grid-template-columns: 20% 20% 20% 20% 20%; */
+  grid-template-rows: 200px 300px 200px;
+  grid-template-columns: repeat(5, 20%);
+  box-sizing: border-box;
+  gap: 0;
+}
+.contenedorGridJustifyContentEnd {
+  display: grid;
+  justify-content: end;
+}
+.contenedorGridJustifyContentCenter {
+  display: grid;
+  justify-content: center;
+}
+.contenedorGridJustifyContentSpace-around {
+  display: grid;
+  justify-content: space-around;
+}
+.contenedorGridJustifyContentSpace-evenly {
+  display: grid;
+  justify-content: space-evenly;
+}
+.contenedorGridJustifyContentSpace-between {
+  display: grid;
+  justify-content: space-between;
+}
+.contenedorGridAlingContent {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  margin-top: 30px;
+  min-height: 600px;
+}
+
+/*# sourceMappingURL=estilos2.css.map */
