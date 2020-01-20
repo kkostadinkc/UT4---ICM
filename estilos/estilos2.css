@@ -1,0 +1,39 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+body .imagenResponsivaMaxWidth {
+  width: 80%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+body .contenedorImagen {
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 100px;
+  width: 70%;
+  height: 500px;
+  min-height: 500px;
+  background-image: url(../img/imagen4.jpg);
+  background-repeat: no-repeat;
+  border: 1px solid black;
+  background-size: contain;
+}
+
+.contenedor {
+  display: grid;
+  width: 100%;
+  background-color: 231;
+  grid-template-columns: 49%, 49%;
+}
+.contenedor__elementoHijo {
+  background-color: black;
+}
+.contenedor__elementoHijo__imagenResponsiva {
+  width: 30%;
+  height: auto;
+}
+
+/*# sourceMappingURL=estilos2.css.map */

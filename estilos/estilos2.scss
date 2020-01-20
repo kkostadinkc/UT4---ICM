@@ -1,0 +1,40 @@
+body{
+    padding: 0;
+    margin: 0;
+    .imagenResponsivaMaxWidth{
+        width: 80%;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+    .contenedorImagen{
+        display: block;
+        margin: auto;
+        margin-top: 40px;
+        margin-bottom: 100px;
+        width: 70%;
+        height: 500px;
+        min-height: 500px;
+        background-image: url(../img/imagen4.jpg);
+        background-repeat: no-repeat;
+        border: 1px solid black;
+        background-size: contain;
+
+    }
+}
+
+.contenedor{
+    display: grid;
+    width: 100%;
+    background-color: red($color: #e76363);
+    grid-template-columns: 49%, 49%;
+
+    &__elementoHijo{
+        background-color: black;
+
+        &__imagenResponsiva{
+            width: 30%;
+            height: auto;
+        }    
+    }
+}
