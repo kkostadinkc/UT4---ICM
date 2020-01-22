@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Untitled-1</title>
+</head>
+
+
+<body>
+    <h1>Canvas</h1>
+    <h2>Dibujar una línea (realizar ejemplo enlazando dos líneas):</h2>
+    <canvas id="canvas1" class="clasecanvas1" width="600" height="400" style="border:1px solid #d3d3d3;">
+    </canvas>
+    <br>
+
+    <h2>Dibujar texto:</h2>
+    <canvas id="canvas2" class="clasecanvas1" width="600" height="400" style="border:1px solid #d3d3d3;">
+    </canvas>
+    <br>
+
+    <h2>Dibujar un circulo:</h2>
+    <canvas id="canvas3" class="clasecanvas1" width="600" height="400" style="border:1px solid #d3d3d3;">
+    </canvas>
+    <br>
+
+    <h2>Dibujar una imagen:</h2>
+    <img id="kamelot1" src="img/mono.jpg" alt="Kamelot banda">
+    <p>Canvas to fill:</p>
+    <canvas id="canvas4" width="600" height="400" style="border:1px solid #d3d3d3;">
+    El navegador no soporta canvas HTML5.</canvas>
+    
+    <p><button onclick="dibujarEnCanvas()">Dibujar imagen</button></p>
+    
+</body>
+<!-- Dibujar una línea -->
+<script>
+    var canvasvar1 = document.getElementById("canvas1");
+    var contexto1 = canvasvar1.getContext("2d");
+    contexto1.moveTo(0, 0);
+    contexto1.lineTo(600, 400);/*Eje x eje y*/
+    contexto1.stroke();
+</script>
+
+<!-- Dibujar texto: -->
+<script>
+    var canvasvar1 = document.getElementById("canvas2");
+    var contexto1 = canvasvar1.getContext("2d");
+    contexto1.font = "30px Arial";
+    contexto1.fillText("Hola a la clase de DIW", 150, 150);/*x, y*/
+</script>
+
+<!-- Dibujar un circulo: -->
+<script>
+    var canvasvar1 = document.getElementById("canvas3");
+    var contexto1 = canvasvar1.getContext("2d");
+    contexto1.beginPath();
+    contexto1.arc(300, 200, 150, 0, 2 * Math.PI);/*Eje x, eje y, radio, inicio de la circunferencia (0) y final de la circunferencia(2*PI) (2*Math.PI*R es la longitud completa de la circunferencia*/
+    contexto1.stroke();
+</script>
+
+<!-- Dibujar una imagen: -->
+<script>
+    function dibujarEnCanvas() {
+    var canvasvar1 = document.getElementById("canvas4");
+    var contexto1 = canvasvar1.getContext("2d");
+    var imagen1 = document.getElementById("kamelot1");
+    contexto1.drawImage(imagen1,150,100);
+}
+</script>
+
+</html>

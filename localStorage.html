@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Untitled-1</title>
+</head>
+
+
+<body>
+    <h1>Almacenamiento local</h1>
+    <h2>Local Storage:</h2>
+    <div id="elementoAlmacen"></div>
+    <script>
+        // Primero comprobamos la compatibilidad del navegador
+        if (typeof(Storage) !== "undefined") {
+            //Almacenamos
+            localStorage.setItem("equipo", "Deportivo");
+            //Obtenemos los datos
+         document.getElementById("elementoAlmacen").innerHTML = localStorage.getItem("equipo");
+        } else {
+            document.getElementById("elementoAlmacen").innerHTML = "El navegador no es compatible con almacenamiento local";
+        }
+        </script>    
+</body>
+
+
+</html>

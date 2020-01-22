@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            border: 5px blue;
+            border-style:dotted;
+            margin: 20px;
+            padding: 25px;
+        }
+
+        button{
+            display: inline;
+            margin: 5px;
+        }
+    </style>
+    <script> 
+        function reproducirVideo(identificador)
+        { 
+        elementoVideo=document.getElementById(identificador); 
+        elementoVideo.play(); 
+        } 
+        function pausarVideo(identificador){ 
+        elementoVideo=document.getElementById(identificador);
+        elementoVideo.pause(); 
+        } 
+        function pararVideo(identificador){
+        elementoVideo=document.getElementById(identificador); 
+        elementoVideo.currentTime = 0; elementoVideo.pause(); 
+        } 
+        function reiniciarVideo(identificador){ 
+        elementoVideo=document.getElementById(identificador);
+        elementoVideo.currentTime = 0; elementoVideo.play(); 
+        } 
+        function aumentarVolumenVideo(identificador){ 
+        elementoVideo=document.getElementById(identificador);
+        elementoVideo.volume+=0.1;
+        } 
+        function disminuirVolumenVideo(identificador){ 
+        elementoVideo=document.getElementById(identificador);
+        elementoVideo.volume-=0.1;
+        } 
+        </script>
+        
+</head>
+
+<div>
+    <h1>Metodos básicos</h1>
+    <h2>Controlar la reproducción multimedia: vamos a utilizar los métodos play, pause, volume+ y volume-</h2>
+
+    <video id=”video1” width=”300” height=”200” autoplay=”autoplay” controls loop=”loop”>
+    <source src=”videos/Ashen.mp4” type=”video/mp4”>
+    <source src=”videos/Ashen.ogv” type=”video/ogg”>
+    <source src=”videos/Ashen.webm” type=”video/webm”>
+    Tu navegador no soporta esta etiqueta HTML5
+    </video>
+    <div>
+      <button onclick="document.getElementById('video1').play()">Reproducir el Vídeo</button>
+      <button onclick="document.getElementById('video1').pause()">Pausar el Vídeo</button>
+      <button onclick="document.getElementById('video1').volume+=0.1">Aumentar el Volumen del Vídeo</button>
+      <button onclick="document.getElementById('video1').volume-=0.1">Disminuir el Volumen del Vídeo</button>
+    </div>
+    
+</div>
+
+   
+</body>
+</html>

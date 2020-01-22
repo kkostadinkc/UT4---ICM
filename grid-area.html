@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="estilos/estilos.css">
+
+        <style>
+            .contenedorGrid {
+                display: -ms-grid;
+                display: grid;
+                -ms-grid-columns: (auto)[4];
+                grid-template-columns: repeat(4, auto);
+                -ms-grid-rows: (auto)[4];
+                grid-template-rows: repeat(4, auto);
+                background-color: #2196f3;
+                grid-gap: 10px;
+                padding: 10px; 
+            }
+            .contenedorGrid__elementoHijo {
+                background-color: rgba(255, 255, 255, 0.8);
+                text-align: center;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                font-size: 30px; 
+            }
+            .contenedorGrid__elemento1 {
+                -ms-grid-row: 1;
+                -ms-grid-row-span: 2;
+                -ms-grid-column: 1;
+                -ms-grid-column-span: 3;
+                grid-area: 1 / 1 / 3 / 4; 
+            }
+            .contenedorGrid__elemento4 {
+                -ms-grid-row: 3;
+                -ms-grid-row-span: 2;
+                -ms-grid-column: 1;
+                -ms-grid-column-span: 1;
+                grid-area: 3 / 1 / 5 / 2;
+                display: -ms-grid;
+                display: grid;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -ms-flex-line-pack: center;
+                align-content: center; 
+            }
+            .contenedorGrid__elemento6 {
+                -ms-grid-row: 3;
+                -ms-grid-row-span: 2;
+                -ms-grid-column: 3;
+                -ms-grid-column-span: 2;
+                grid-area: 3 / 3 / 5 / 5; 
+            }
+        </style>
+    </head>
+    <body>
+        <div class="contenedorGrid">
+            <div class="contenedorGrid__elementoHijo contenedorGrid__elemento1">1</div>
+            <div class="contenedorGrid__elementoHijo">2</div>
+            <div class="contenedorGrid__elementoHijo">3</div>  
+            <div class="contenedorGrid__elementoHijo contenedorGrid__elemento4">4</div>
+            <div class="contenedorGrid__elementoHijo">5</div>
+            <div class="contenedorGrid__elementoHijo contenedorGrid__elemento6">6</div>
+            <div class="contenedorGrid__elementoHijo">7</div>
+            <div class="contenedorGrid__elementoHijo">8</div>  
+            <div class="contenedorGrid__elementoHijo">9</div>
+            <div class="contenedorGrid__elementoHijo">10</div>
+            <div class="contenedorGrid__elementoHijo">11</div>
+        </div>
+          
+    </body>
+</html>
